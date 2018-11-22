@@ -1,10 +1,13 @@
 import socket
+import getImage
 
-SERVER_IP = "127.0.0.1" #"192.168.200.76"
+SERVER_IP = "192.168.43.24" #"192.168.200.76"
 SERVER_PORT = 1234
 
-def getImege():
-    img = open("imege.jpg", "r")
+def getImege(path):
+    #get imege
+    img = open(path, "r")
+    
     print(img.read())
     return img.read()
 
@@ -25,8 +28,9 @@ def sendData(msg):
     sock.close()
 
 def main():
-    msg2 = "hello, im ophir\n"
-   # msg = getImege()
+    msg2 = "Gboy\n"
+    
+    #msg = getImege()
     sendData(msg2)
 
 if __name__ == "__main__":
